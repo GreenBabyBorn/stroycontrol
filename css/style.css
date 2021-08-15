@@ -79,6 +79,10 @@ body {
     background: #FFFFFF;
 }
 
+body._lock {
+    overflow: hidden;
+}
+
 @font-face {
     font-family: 'Inter';
     src: url('../fonts/Inter-Regular.ttf');
@@ -407,16 +411,14 @@ body {
 }
 
 .care__title {
-    height: 144px;
     text-align: left;
     margin-bottom: 16px;
     display: inline-block;
 }
 
 .care__text {
-    height: 96px;
     text-align: left;
-    margin-bottom: 28px;
+    padding-bottom: 28px;
 }
 
 .caption {
@@ -564,8 +566,6 @@ hr {
     padding-bottom: 19px;
 }
 
-.bottom-item__text {}
-
 .delivery {
     display: flex;
     flex-direction: column;
@@ -669,7 +669,7 @@ hr {
     align-items: center;
     padding-left: 40px;
     padding-right: 40px;
-    /* justify-content: space-between; */
+   
 }
 
 .footer-reliability__text {
@@ -1066,12 +1066,11 @@ hr {
     }
     .logo {
         z-index: 5;
-
     }
     .menu__body {
         position: fixed;
         top: 0;
-        left: -100%;
+        left: 100%;
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.9);
@@ -1079,12 +1078,10 @@ hr {
         padding: 96px 30px 30px 30px;
         overflow: auto;
     }
-
     .menu__body._active {
         left: 0;
     }
-
-    .menu__body::before{
+    .menu__body::before {
         content: "";
         top: 0;
         position: fixed;
@@ -1092,18 +1089,17 @@ hr {
         width: 100%;
         height: 96px;
         background-color: #FFFFFF;
-        z-index: 2;
+        z-index: 3;
     }
-
     .menu__list {
         margin: 0 auto;
         align-self: center;
         align-items: center;
         flex-direction: column;
-        gap: 30px;
+        gap: 40px;
     }
     .menu__link {
-        font-size: 20px;
+        font-size: 24px;
         color: #FFFFFF;
     }
     /* -------Бургер------- */
@@ -1111,8 +1107,8 @@ hr {
         z-index: 6;
         display: block;
         position: relative;
-        width: 30px;
-        height: 18px;
+        width: 40px;
+        height: 20px;
         cursor: pointer;
     }
     .menu__icon::before, .menu__icon::after, .menu__icon>span {
@@ -1136,5 +1132,131 @@ hr {
         top: 50%;
         transform: scale(1) translate(0px, -50%);
     }
-     /* -------Бургер------- */
+    .menu__icon._active span {
+        transform: scale(0);
+    }
+    .menu__icon._active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+    .menu__icon._active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+    /* -------Бургер------- */
+}
+
+@media screen and (max-width:768px) {
+
+    .logo{
+        font-size: 18px;
+    }
+
+    .title {
+        font-size: 20px;
+        line-height: normal;
+    }
+    .text {
+        font-size: 14px;
+        line-height: normal;
+    }
+    .main__info {
+        font-size: 24px;
+        line-height: normal;
+    }
+    .main__background-image-1 {
+        background: url('../images/main__background-image-1.png') center / contain no-repeat;
+        width: 100%;
+        height: 328px;
+        margin: 0 auto;
+        margin-top: 44px;
+    }
+    .main__background-image-2 {
+        display: none;
+    }
+    .building__bottom-title {
+        display: none;
+    }
+    .main {
+        margin-bottom: 0px;
+    }
+    .promo-row {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 74px;
+        gap: 41px;
+        margin: 0 auto;
+    }
+    .product{
+        margin-bottom: 80px;
+    }
+    .product__title {
+        margin-bottom: none;
+    }
+    .product-item__img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+    .title_small {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: normal;
+        color: #212B31;
+    }
+    .text_small {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: normal;
+        color: #72787D;
+    }
+    .title_small_light {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: normal;
+        color: #FFFFFF;
+    }
+    .caption {
+        font-size: 16px;
+    }
+    .materials-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* grid-template-rows: 1fr 1fr ; */
+        grid-row-gap: 17px;
+        grid-column-gap: 14px;
+        margin-bottom: 22px;
+    }
+    .reliability__features {
+        display: flex;
+        flex-direction: column;
+        gap: 33px;
+        margin-bottom: 32px;
+    }
+    .footer-reliability {
+        display: flex;
+        flex-direction: column;
+        background-color: #F6F8F9;
+        width: 100%;
+        height: 100%;
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .main__buttons{
+        flex-direction: column;
+    }
+
+    .delivery{
+        padding-bottom: 73px;
+    }
+
 }
