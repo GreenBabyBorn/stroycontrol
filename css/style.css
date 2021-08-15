@@ -1107,6 +1107,19 @@ hr {
     display: none;
 }
 
+.footer__bottom-copyright{
+    padding-right: 60px;
+}
+
+.footer__item-list li{
+    padding-bottom: 8px;
+
+}
+.footer__item-list li:last-child{
+    padding-bottom: 0px;
+
+}
+
 @media screen and (max-width:1024px) {
     .header__container {
         max-width: 1086px;
@@ -1509,5 +1522,9 @@ hr {
     .statistics__button_white {
         margin-bottom: 10px;
         margin-right: 0px;
+    }
+    .footer__item-list li{
+        padding-bottom: 10px;
+    
     }
 }
