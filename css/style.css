@@ -142,7 +142,6 @@ body._lock {
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 22px;
 }
 
 .menu__link {
@@ -154,6 +153,15 @@ body._lock {
     color: #72787D;
     transition: ease 0.3s;
     white-space: nowrap;
+    /* margin-right: 22px; */
+}
+
+.menu__list li {
+    margin-right: 22px;
+}
+
+.menu__list>li:last-child {
+    margin-right: 0px;
 }
 
 .menu__link:hover {
@@ -210,13 +218,16 @@ body._lock {
 .main__buttons {
     display: flex;
     flex-direction: row;
-    gap: 10px;
     margin: 0 auto;
     margin-top: 30px;
     text-align: center;
     align-items: center;
     padding: 13px 0px;
     justify-content: center;
+}
+
+.main__button-dark {
+    margin-right: 10px;
 }
 
 .button_dark {
@@ -305,15 +316,19 @@ body._lock {
 .promo-row {
     display: flex;
     padding-bottom: 142px;
-    gap: 41px;
     margin: 0 auto;
 }
 
 .promo-row__item {
+    margin-right: 41px;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-basis: 33.333%;
+}
+
+.promo-row__item:last-child {
+    margin-right: 0px;
 }
 
 .promo-row__img {
@@ -500,7 +515,6 @@ hr {
     margin-top: 28px;
     display: flex;
     flex-direction: column;
-    gap: 64px;
 }
 
 .title_small {
@@ -541,6 +555,7 @@ hr {
 
 .product-item {
     display: flex;
+    margin-bottom: 67px;
 }
 
 .product-item__content {
@@ -636,7 +651,6 @@ hr {
 
 .reliability__features {
     display: flex;
-    gap: 33px;
     margin-bottom: 62px;
 }
 
@@ -645,6 +659,11 @@ hr {
     flex-direction: column;
     align-items: center;
     flex-basis: 33, 33%;
+    margin-right: 33px;
+}
+
+.features__item:last-child {
+    margin-right: 0px;
 }
 
 .features-img {
@@ -735,11 +754,18 @@ hr {
 .statistics__buttons {
     display: flex;
     flex-direction: row;
-    gap: 10px;
     margin: 0 auto;
     margin-top: 30px;
     text-align: center;
     align-items: center;
+}
+
+.statistics__button_white {
+    margin-right: 10px;
+}
+
+.statistics__button_white:last-child {
+    margin-right: 0px;
 }
 
 .promo-row__statistics {
@@ -816,11 +842,18 @@ hr {
 .work__buttons {
     display: flex;
     flex-direction: row;
-    gap: 10px;
     margin: 0 auto;
     margin-top: 30px;
     text-align: center;
     align-items: center;
+}
+
+.work__button_dark {
+    margin-right: 10px;
+}
+
+.work__button_dark:last-child {
+    margin-right: 0px;
 }
 
 .comments {
@@ -917,7 +950,6 @@ hr {
 
 .comments__slider-pages {
     display: flex;
-    gap: 8px;
 }
 
 .comments__slider-page {
@@ -926,6 +958,11 @@ hr {
     background: rgba(3, 111, 199, 0.2);
     border-radius: 8px;
     cursor: pointer;
+    margin-right: 8px;
+}
+
+.comments__slider-page:last-child {
+    margin-right: 0px;
 }
 
 .comments__slider-page_active {
@@ -1031,12 +1068,19 @@ hr {
 
 .footer__item-list {
     display: flex;
-    gap: 8px;
     flex-direction: column;
 }
 
 .footer__item-link {
     transition: ease 0.3s;
+}
+
+.footer__item-list {
+    margin-bottom: 8px;
+}
+
+.footer__item-list:last-child {
+    margin-bottom: 0;
 }
 
 .footer__item-link:hover {
@@ -1104,7 +1148,13 @@ hr {
         align-self: center;
         align-items: center;
         flex-direction: column;
-        gap: 40px;
+        margin-bottom: 40px;
+    }
+    .menu__list li {
+        margin-bottom: 40px;
+    }
+    .menu__list li:last-child {
+        margin-bottom: 0;
     }
     .menu__link {
         font-size: 24px;
@@ -1190,8 +1240,10 @@ hr {
         display: flex;
         flex-direction: column;
         padding-bottom: 74px;
-        gap: 41px;
         margin: 0 auto;
+    }
+    .promo-row__item {
+        margin-bottom: 41px;
     }
     .product {
         margin-bottom: 80px;
@@ -1243,16 +1295,21 @@ hr {
     .reliability__features {
         display: flex;
         flex-direction: column;
-        gap: 33px;
         margin-bottom: 32px;
     }
+    .features__item {
+        margin-bottom: 33px;
+        margin-right: 0px;
+    }
     .footer-reliability {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-row-gap: 15px;
+        justify-items: center;
         background-color: #F6F8F9;
         width: 100%;
         height: 100%;
-        gap: 15px;
         text-align: center;
         padding: 20px;
     }
@@ -1329,7 +1386,6 @@ hr {
     }
     .comments__slider-pages {
         display: flex;
-        gap: 8px;
     }
     .comments__slider-page {
         width: 10px;
@@ -1375,17 +1431,14 @@ hr {
         grid-template-rows: 1fr;
         grid-row-gap: 40px;
     }
-    
     .comments__startup {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
     .comments__startup-img {
         margin-bottom: 17px;
     }
-    
     .comments__startup-text {
         max-width: 109Px;
         text-align: center;
@@ -1393,54 +1446,68 @@ hr {
     .comments__startup:last-child {
         grid-area: 1/1;
     }
-    .footer__top{
-        flex-direction: column;
-        
-        gap: 30px;
+    .footer__top {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-row-gap: 30px;
         margin-bottom: 60px;
     }
-    .footer__info{
+    .footer__info {
         text-align: center;
     }
-    .footer__item{
+    .footer__item {
         text-align: center;
     }
-    .footer__item-title{
+    .footer__item-title {
         padding-bottom: 10px;
     }
     .footer__logo {
         margin: 0 auto;
         margin-bottom: 10px;
     }
-
     .optimization {
         background: url(../images/optimization-bg.png) center / cover no-repeat;
         margin-bottom: none;
         align-items: center;
         margin-bottom: 80px;
     }
-    .optimization__title {
-    }
-    .title {
-    }
     .optimization__buttons {
         display: flex;
-        gap: 10px;
         align-items: center;
         flex-direction: column;
-        
         padding: none;
         align-items: center;
         margin: none;
     }
     .optimization-dark {
-        margin: 0px;
-        
+        margin-bottom: 10px;
+        margin-right: 0px;
     }
-    .button_dark {
+    .promo-row__item {
+        margin-bottom: 41px;
+        margin-right: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 33.333%;
     }
-    .optimization-white {
+    .promo-row__item:last-child {
+        margin-bottom: 0px;
     }
-    .button_white {
+    .menu__list li {
+        margin-right: 0px;
+    }
+    .main__button-dark {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+    .work__button_dark {
+        margin-bottom: 10px;
+        margin-right: 0px;
+    }
+    .statistics__button_white {
+        margin-bottom: 10px;
+        margin-right: 0px;
     }
 }
