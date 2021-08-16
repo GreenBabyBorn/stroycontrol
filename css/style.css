@@ -156,6 +156,10 @@ body._lock {
     /* margin-right: 22px; */
 }
 
+.menu__link._active {
+    color: #036FC7;
+}
+
 .menu__list li {
     margin-right: 22px;
 }
@@ -165,7 +169,7 @@ body._lock {
 }
 
 .menu__link:hover {
-    color: #036FC7;
+    color: #5299d3;
 }
 
 .menu__body {
@@ -507,10 +511,6 @@ hr {
     margin-bottom: 21px;
 }
 
-.product__text {
-    height: 96px;
-}
-
 .product__bottom {
     margin-top: 28px;
     display: flex;
@@ -632,9 +632,11 @@ hr {
     flex-direction: column;
     align-items: center;
     margin-bottom: 144px;
+    padding-top: 20px;
 }
 
 .reliability__title {
+
     margin-bottom: 17px;
 }
 
@@ -740,8 +742,6 @@ hr {
     display: inline-block;
     margin-bottom: 10px;
 }
-
-.statistics-item__text {}
 
 .statistics__img {
     background: url('../images/statistics.png') center / contain no-repeat;
