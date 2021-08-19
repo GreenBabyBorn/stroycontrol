@@ -153,7 +153,6 @@ body._lock {
     color: #72787D;
     transition: ease 0.3s;
     white-space: nowrap;
-    /* margin-right: 22px; */
 }
 
 .menu__link._active {
@@ -636,7 +635,6 @@ hr {
 }
 
 .reliability__title {
-
     margin-bottom: 17px;
 }
 
@@ -744,7 +742,7 @@ hr {
 }
 
 .statistics__img {
-    background: url('../images/statistics.png') center / contain no-repeat;
+    background: url('../images/statistics.png') left / cover no-repeat;
     width: 100%;
     height: 493px;
     margin-left: 40px;
@@ -904,36 +902,44 @@ hr {
     justify-self: center;
 }
 
-.comments__slider-container {
-    flex-basis: 55%;
+.comments__slider-container .swiper-pagination {
+    text-align: left;
+    padding-top: 18px;
+    padding-bottom: 28px;
+    padding-left: 67px;
+    position: relative;
 }
 
-.comments__slider {
+.comments__slider-container {
+    height: 100%;
+    width: 100%;
+    flex-basis: 55%;
     background: #F6F8F9;
     position: relative;
     z-index: 1;
-    margin: 0 auto;
     border-radius: 5px;
+}
+
+.comments__slide {
     padding: 58px 67px 28px 67px;
 }
 
-.comments__slider::before {
+.comments__slider-container::before {
     content: url('../images/slider-bg.png');
     position: absolute;
-    z-index: -1;
     left: 42px;
     top: 46px;
 }
 
 .comments__slider-text {
     display: inline-block;
+    max-width: 100%;
     padding-bottom: 32px;
     text-align: left;
 }
 
 .comments__slider-human {
     display: flex;
-    margin-bottom: 28px;
 }
 
 .comments__slider-img {
@@ -946,27 +952,6 @@ hr {
     margin-left: 8px;
     display: flex;
     flex-direction: column;
-}
-
-.comments__slider-pages {
-    display: flex;
-}
-
-.comments__slider-page {
-    width: 10px;
-    height: 10px;
-    background: rgba(3, 111, 199, 0.2);
-    border-radius: 8px;
-    cursor: pointer;
-    margin-right: 8px;
-}
-
-.comments__slider-page:last-child {
-    margin-right: 0px;
-}
-
-.comments__slider-page_active {
-    background: #036FC7;
 }
 
 .comments__startups {
@@ -1059,6 +1044,12 @@ hr {
 .footer__facebook {
     width: 24px;
     height: 24px;
+    transition: all 0.3s ease 0s;
+    border-radius: 50%;
+}
+
+.footer__facebook:hover {
+    background: gainsboro;
 }
 
 .footer__item-title {
@@ -1107,20 +1098,19 @@ hr {
     display: none;
 }
 
-.footer__bottom-copyright{
+.footer__bottom-copyright {
     padding-right: 60px;
 }
 
-.footer__item-list li{
+.footer__item-list li {
     padding-bottom: 8px;
-
 }
-.footer__item-list li:last-child{
+
+.footer__item-list li:last-child {
     padding-bottom: 0px;
-
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1125px) {
     .header__container {
         max-width: 1086px;
         margin: 0 auto;
@@ -1370,13 +1360,15 @@ hr {
     .comments__slider-container {
         flex-basis: 55%;
     }
-    .comments__slider {
-        background: #F6F8F9;
+    .comments__slide {
+        padding: 29px 34px 14px 34px;
+    }
+    .comments__slider-container .swiper-pagination {
+        text-align: left;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 34px;
         position: relative;
-        z-index: 1;
-        margin: 0 auto;
-        border-radius: 5px;
-        padding: 26px 33px 14px 33px;
     }
     .comments__slider-text {
         display: inline-block;
@@ -1396,19 +1388,6 @@ hr {
         margin-left: 8px;
         display: flex;
         flex-direction: column;
-    }
-    .comments__slider-pages {
-        display: flex;
-    }
-    .comments__slider-page {
-        width: 10px;
-        height: 10px;
-        background: rgba(3, 111, 199, 0.2);
-        border-radius: 8px;
-        cursor: pointer;
-    }
-    .comments__slider-page_active {
-        background: #036FC7;
     }
     .work {
         display: flex;
@@ -1523,8 +1502,7 @@ hr {
         margin-bottom: 10px;
         margin-right: 0px;
     }
-    .footer__item-list li{
+    .footer__item-list li {
         padding-bottom: 10px;
-    
     }
 }

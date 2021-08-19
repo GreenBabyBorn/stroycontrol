@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>СтройКонтроль</title>
 </head>
 
 <body>
 
-
     <header class="header">
         <div class="header__container">
-
             <a class="logo" href="#"><img src="images/logo.png" alt="">СтройКонтроль</a>
             <div class="header__menu menu">
                 <div class="menu__icon">
@@ -35,10 +35,7 @@
                         <span>Заказать демо</span>
                     </a>
                 </nav>
-
             </div>
-
-
         </div>
     </header>
 
@@ -85,7 +82,6 @@
         </div>
     </div>
 
-
     <div class="container">
         <div class="building">
             <span class="building__title title">Строительство - это хаос</span>
@@ -101,7 +97,6 @@
         </div>
     </div>
 
-
     <div class="container">
         <div class="care">
             <div class="care__item">
@@ -115,7 +110,6 @@
             <div class="care__img"></div>
         </div>
     </div>
-
 
     <div class="container">
         <div class="company-list">
@@ -181,7 +175,7 @@
             </div>
         </div>
     </div>
-    <!-- ---- -->
+    
     <div class="container">
         <div class="delivery">
             <span class="delivery__title title">Доставка стала проще</span>
@@ -448,24 +442,38 @@
                     </div>
                 </div>
 
-                <div class="comments__slider-container">
-                    <div class="comments__slider">
-                        <span class="comments__slider-text title">Мы видим огромный потенциал в таких решениях, как
-                            СтройКонтроль, и хотим использовать их для улучшения наших строительных процессов.</span>
-                        <div class="comments__slider-human">
-                            <img class="comments__slider-img" src="images/comments__slider-img.jpg" alt="">
-                            <div class="comments__slider-info">
-                                <span class="comments__slider-name title_small">Волков Матвей</span>
-                                <p class="comments__slider-position text_small">Генеральный директор ООО “СпецСтрой”</p>
+                <div class="comments__slider-container swiper-container">
+                    <div class="comments__slider swiper-wrapper">
+                        <div class="comments__slide swiper-slide">
+                            <span class="comments__slider-text title">Мы видим огромный потенциал в таких решениях, как
+                                СтройКонтроль, и хотим использовать их для улучшения наших строительных
+                                процессов.</span>
+                            <div class="comments__slider-human">
+                                <img class="comments__slider-img" src="images/comments__slider-img.jpg" alt="">
+                                <div class="comments__slider-info">
+                                    <span class="comments__slider-name title_small">Волков Матвей</span>
+                                    <p class="comments__slider-position text_small">Генеральный директор ООО “СпецСтрой”
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="comments__slider-pages">
-                            <div class="comments__slider-page comments__slider-page_active"></div>
-                            <div class="comments__slider-page"></div>
+                        <div class="comments__slide swiper-slide">
+                            <span class="comments__slider-text title">Мы видим огромный потенциал в таких решениях, как
+                                СтройКонтроль, и хотим использовать их для улучшения наших строительных
+                                процессов.</span>
+                            <div class="comments__slider-human">
+                                <img class="comments__slider-img" src="images/comments__slider-img.jpg" alt="">
+                                <div class="comments__slider-info">
+                                    <span class="comments__slider-name title_small">Попов Александр</span>
+                                    <p class="comments__slider-position text_small">Генеральный директор ООО “Строим
+                                        вместе”
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-
             </div>
             <div class="comments__startups">
                 <div class="comments__startup">
@@ -518,32 +526,34 @@
                 <div class="footer__item">
                     <span class="footer__item-title title_small">Наш продукт</span>
                     <ul class="footer__item-list">
-                        <li><a class="footer__item-link text_small" href="">Процесс</a></li>
-                        <li><a class="footer__item-link text_small" href="">Продукция</a></li>
+                        <li><a data-goto=".work" class="footer__item-link text_small" href="">Процесс</a></li>
+                        <li><a data-goto=".delivery" class="footer__item-link text_small" href="">Продукция</a></li>
                     </ul>
                 </div>
                 <div class="footer__item">
                     <span class="footer__item-title title_small">Обслуживание</span>
                     <ul class="footer__item-list">
-                        <li><a class="footer__item-link text_small" href="">Клиенты</a></li>
-                        <li><a class="footer__item-link text_small" href="">Надёжность</a></li>
+                        <li><a data-goto=".comments" class="footer__item-link text_small" href="">Клиенты</a></li>
+                        <li><a data-goto=".reliability" class="footer__item-link text_small" href="">Надёжность</a></li>
                     </ul>
                 </div>
                 <div class="footer__item">
                     <span class="footer__item-title title_small">Компания</span>
                     <ul class="footer__item-list">
-                        <li><a class="footer__item-link text_small" href="">О нас</a></li>
-                        <li><a class="footer__item-link text_small" href="">Связаться с нами</a></li>
+                        <li><a data-goto=".product" class="footer__item-link text_small" href="">О нас</a></li>
+                        <li><a data-goto=".optimization" class="footer__item-link text_small" href="">Связаться с
+                                нами</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <span class="footer__bottom-copyright text_small">© 2020 СтройКонтроль, Все права защищены.</span>
-                <a href=""><span class="footer__bottom-policy text_small">Политика конфиденциальности</span></a>
+                <a href="#policy"><span class="footer__bottom-policy text_small">Политика конфиденциальности</span></a>
             </div>
         </div>
     </div>
 
+    <script src="js/swiper-bundle.js"></script>
     <script src="js/main.js"></script>
 </body>
 
